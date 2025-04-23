@@ -10,24 +10,24 @@ jobs:
     runs-on: ubuntu-latest 
  
     steps: 
-    - name: Checkout du code 
-    - uses: actions/checkout@v3 
+      - name: Checkout du code 
+      - uses: actions/checkout@v3 
  
-    - name: Installer Python 
-      uses: actions/setup-python@v5 
-      with: 
+      - name: Installer Python 
+        uses: actions/setup-python@v5 
+        with: 
         python-version '3.10' 
  
-    - name: Installer les dépendances 
-      run:  
-       python -m pip install --upgrade pip 
-       pip install pytest
+      - name: Installer les dépendances 
+        run:  
+          python -m pip install --upgrade pip 
+          pip install pytest
        
-    - name: Lint du code (flake8) 
-      run:  
-        pip install flake8 
-        flake8 . 
+      - name: Lint du code (flake8) 
+        run:  
+          pip install flake8 
+          flake8 . 
   
-    - name: Lancer les tests 
-      run:  
-       pytest 
+      - name: Lancer les tests 
+        run:  
+          pytest 
