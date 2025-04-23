@@ -26,7 +26,8 @@ jobs:
     - name: 🧪 Installer les dépendances
       run: |
         pip -m pip install --upgrade pip
-        pip install pytest flake8
+        pip install pytest 
+        pip install flake8
 
     - name: ✅ Lancer les tests unitaires
       run: pytest
